@@ -30,6 +30,7 @@ GOOGLE_CREDENTIALS = os.getenv("GOOGLE_CREDENTIALS")
 
 # --- Авторизация в Google Drive ---
 import json
+print("GOOGLE_SERVICE_ACCOUNT_JSON:", os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON"))
 credentials_info = json.loads(GOOGLE_CREDENTIALS)
 credentials = service_account.Credentials.from_service_account_info(
     credentials_info,
